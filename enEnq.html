@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Customer Experience Survey</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="img/logo.png" />
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	</head>
+    <body>
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="ACZ logo"></a>
+        <div>
+            <div class="center">
+                <form id="enq" name="enq">
+                    <input name="taal" type="hidden" value="EN">
+                    <div id="firstEn">
+                    <div class="elements">
+                        <label>Commission Number: </label>
+                        <br>
+                        <input class="plate" name="commissienummer" type="number" required>
+                    </div>
+                    <div class="elements names">
+                        <label>Service Advisor:</label>
+                        <br>
+                        <label class="block"><input name="levering" type="radio" value="BAKI" required>Baki</label>
+                        <label class="block"><input name="levering" type="radio" value="YOUSSEF">Youssef</label>
+                        <label class="block"><input name="levering" type="radio" value="FREDERIC">Frederic</label>
+                        <label class="block"><input name="levering" type="radio" value="NANCY">Nancy</label>
+                        <label class="block"><input name="levering" type="radio" value="JEROEN">Jeroen</label>
+                        <label class="block"><input name="levering" type="radio" value="JORDAN">Jordan</label>
+                    </div>
+                    
+                    <div class="elements names">
+                        <label>Surveyee:</label>
+                        <br>
+                        <label class="block"><input name="enquete" type="radio" value="BAKI" required>Baki</label>
+                        <label class="block"><input name="enquete" type="radio" value="YOUSSEF">Youssef</label>
+                        <label class="block"><input name="enquete" type="radio" value="FREDERIC">Frederic</label>
+                        <label class="block"><input name="enquete" type="radio" value="NANCY">Nancy</label>
+                        <label class="block"><input name="enquete" type="radio" value="JEROEN">Jeroen</label>
+                        <label class="block"><input name="enquete" type="radio" value="JORDAN">Jordan</label>
+                    </div>                    
+                    <div class="brand elements">
+                        <label class="left">Brand: </label>
+                        <br>
+                        <div style="display: block; margin-bottom: 10px;">
+                        <input class="brand_radio" id="radio1" name="merk" type="radio" value="VW" required>
+                        <label class="brand_label" for="radio1"><img class="brand_img" src="img/vw.jpg" alt="vw logo" style="vertical-align: middle;"></label>
+                        <input class="brand_radio" id="radio2" name="merk" type="radio" value="AUDI">
+                        <label class="brand_label" for="radio2"><img class="brand_img" src="img/audi.jpg" alt="audi logo" style="vertical-align: middle;"></label>
+                        </div>
+                        <div style="display: block;">
+                        <input class="brand_radio" id="radio3" name="merk" type="radio" value="SEAT" required>
+                        <label class="brand_label" for="radio3"><img class="brand_img" src="img/seat.jpg" alt="seat logo" style="vertical-align: middle;"></label>
+                        <input class="brand_radio" id="radio4" name="merk" type="radio" value="SKODA">
+                        <label class="brand_label" for="radio4"><img class="brand_img" src="img/skoda.jpg" alt="skoda logo" style="vertical-align: middle;"></label>
+                        </div>
+                        <div style="display: block;">
+                        <input class="brand_radio" id="radio5" name="merk" type="radio" value="SKODA">
+                        <label class="brand_label" for="radio5"><img class="brand_img" src="img/vwcv.jpg" alt="skoda logo"></label>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="submit" onclick="half()" type="button">Next</button>
+                    </div>
+                    <div id="secondEn">
+                    <div class="long img elements">
+                        <label class="question">How satisfied are you with the reception at ACZ?</label>
+                        <br>
+                        <div class="q1">
+                            <span><input type="radio" name="onthaal" id="q15" value="5" required><label for="q15"><img src="img/star.png" class="star" alt="star image" onclick="unreq(1)"></label></span>
+                            <span><input type="radio" name="onthaal" id="q14" value="4"><label for="q14"><img src="img/star.png" class="star" alt="star image" onclick="unreq(1)"></label></span>
+                            <span><input type="radio" name="onthaal" id="q13" value="3"><label for="q13"><img src="img/star.png" class="star" alt="star image" onclick="req(1)"></label></span>
+                            <span><input type="radio" name="onthaal" id="q12" value="2"><label for="q12"><img src="img/star.png" class="star" alt="star image" onclick="req(1)"></label></span>
+                            <span><input type="radio" name="onthaal" id="q11" value="1"><label for="q11"><img src="img/star.png" class="star" alt="star image" onclick="req(1)"></label></span>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div id="question2" class="long img elements">
+                        <label class="question">When you think about your purchase of your new car. How satisfied are you with the quality of the advise from your service advisor?</label>
+                        <br>
+                        <div class="q2">
+                            <span><input type="radio" name="raadgevingskwaliteit" id="q25" value="5" required><label for="q25"><img src="img/star.png" class="star" alt="star image" onclick="unreq(2)"></label></span>
+                            <span><input type="radio" name="raadgevingskwaliteit" id="q24" value="4"><label for="q24"><img src="img/star.png" class="star" alt="star image" onclick="unreq(2)"></label></span>
+                            <span><input type="radio" name="raadgevingskwaliteit" id="q23" value="3"><label for="q23"><img src="img/star.png" class="star" alt="star image" onclick="req(2)"></label></span>
+                            <span><input type="radio" name="raadgevingskwaliteit" id="q22" value="2"><label for="q22"><img src="img/star.png" class="star" alt="star image" onclick="req(2)"></label></span>
+                            <span><input type="radio" name="raadgevingskwaliteit" id="q21" value="1"><label for="q21"><img src="img/star.png" class="star" alt="star image" onclick="req(2)"></label></span>
+                        </div>
+                    </div>
+                    <br class="hide">
+                    <hr class="hide">
+                    <br class="hide">
+                    <div class="long img elements">
+                        <label class="question">How satisfied are you with the quality of the delivery of your new car?</label>
+                        <br>
+                        <div class="q3">
+                            <span><input type="radio" name="leveringskwaliteit" id="q35" value="5" required><label for="q35"><img src="img/star.png" class="star" alt="star image" onclick="unreq(3)"></label></span>
+                            <span><input type="radio" name="leveringskwaliteit" id="q34" value="4"><label for="q34"><img src="img/star.png" class="star" alt="star image" onclick="unreq(3)"></label></span>
+                            <span><input type="radio" name="leveringskwaliteit" id="q33" value="3"><label for="q33"><img src="img/star.png" class="star" alt="star image" onclick="req(3)"></label></span>
+                            <span><input type="radio" name="leveringskwaliteit" id="q32" value="2"><label for="q32"><img src="img/star.png" class="star" alt="star image" onclick="req(3)"></label></span>
+                            <span><input type="radio" name="leveringskwaliteit" id="q31" value="1"><label for="q31"><img src="img/star.png" class="star" alt="star image" onclick="req(3)"></label></span>
+                        </div>
+                    </div>
+                    <br class="hide">
+                    <hr class="hide">
+                    <br class="hide">
+                    <div class="elements">
+                        <label>What can we improve according to you?</label>
+                        <br>
+                        <input type="text" class="feedback" id="feedback" name="feedback">
+                    </div>
+                    <button type="submit" class="submit" onsubmit="this.reset();">Submit</button>
+                    </div>
+                 </form>
+            </div>
+        </div>
+        <script src="js/app.js"></script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxieSJnMzsh0-KfESm2AkeXc6hlmzbz_eB566WKm2ZxvF-Y5kRG/exec'
+            const form = document.forms['enq']  
+                  form.addEventListener('submit', e => {  
+                   e.preventDefault()  
+                   fetch(scriptURL, { method: 'POST', body: new FormData(form)})  
+                    .then(response => window.location.href = 'endEn.html')  
+                    .catch(error => console.error('Error!', error.message))
+                      console.log("test");
+                  })
+            function half() {
+                if (document.forms["enq"]["commissienummer"].value.length > 0 && $('input[type=radio][name=levering]:checked').size() > 0 && $('input[type=radio][name=enquete]:checked').size() > 0 && $('input[type=radio][name=merk]:checked').size() > 0) {
+                    document.getElementById("firstEn").style.display = "none";
+                    document.getElementById("secondEn").style.display = "inherit";
+                }
+            }
+        </script>
+    </body>
+</html>

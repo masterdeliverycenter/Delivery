@@ -1,0 +1,315 @@
+body {
+    margin: auto;
+    padding: 0;
+    background-color: #f7f7f7;
+    width: 800px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 50px;
+}
+
+
+/*
+======================================================
+MEDIA QUERRIES
+======================================================
+*/
+
+@media screen and (max-width: 1201px) {
+  .long div { 
+    width: 470px;
+}
+}
+
+@media screen and (min-width: 1202px) {
+  .long div { 
+    width: 435px;
+}
+}
+
+
+/*
+======================================================
+END OF MEDIA QUERRIES
+======================================================
+*//*
+======================================================
+CSS CODE FOR STAR SCALE ANIMATION
+======================================================
+*/
+
+.long span { /*FLOAT RIGHT IS FOR MIRRORING THE STAR SCALE*/
+    float:right;
+    text-align: center;
+}
+
+.long input {
+    display: none !important;
+}
+
+.q1 span label {
+    color:#FFF;
+    opacity: 0.2;
+}
+
+.q1:hover ~ span label img,
+.q1:hover img,
+.q1 span.checked label,
+.q1 span.checked ~ span label {
+    color:#FFF;
+    opacity: 1;
+}
+
+.q2 span label {
+    color:#FFF;
+    opacity: 0.2;
+}
+
+.q2:hover ~ span label img,
+.q2:hover img,
+.q2 span.checked label,
+.q2 span.checked ~ span label {
+    color:#FFF;
+    opacity: 1;
+}
+
+.q3 span label {
+    color:#FFF;
+    opacity: 0.2;
+}
+
+.q3:hover ~ span label img,
+.q3:hover img,
+.q3 span.checked label,
+.q3 span.checked ~ span label {
+    color:#FFF;
+    opacity: 1;
+}
+/* STAR LINE WIDTH */
+.long div { 
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+/* STAR IMG SIZE */
+.star {
+    width: 75px;
+}
+
+/*
+======================================================
+END OF STAR SCALE ANIMATION
+======================================================
+*//*
+======================================================
+QUIZ STYLING
+======================================================
+*/
+
+.center {
+    margin: auto;
+    background-color: white;
+    width: 600px;
+    padding: 70px;
+    border-radius: 25px;
+    font-size: 2.4em;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 0 30px hsla(0,0%,39%,.2);
+}
+
+/*
+======================================================
+END OF QUIZ STYLING
+======================================================
+*//*
+======================================================
+HOME PAGE STYLING
+======================================================
+*/
+
+.centerIndex {
+    margin: auto;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerIndex a{
+    margin: auto;
+    border-radius: 100%;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    padding: 80px;
+    font-size: 40px;
+    border-style: outset;
+    border-color: gainsboro;
+    background-color: white;
+}
+
+/*
+======================================================
+END OF HOME PAGE STYLING
+======================================================
+*//*
+======================================================
+SUBMIT BUTTON STYLING
+======================================================
+*/
+
+.submit {
+    float: right;
+    height: 50px;
+    font-size: 1em;
+    width: 40%;
+    border:1px solid black;
+}
+
+/*
+======================================================
+END OF SUBMIT BUTTON STYLING
+======================================================
+*//*
+======================================================
+THANK MESSAGE STYLING
+======================================================
+*/
+
+.thank {
+    padding: 50px;
+    margin: auto;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 3px;
+}
+
+/*
+======================================================
+END OF SUBMIT BUTTON STYLING
+======================================================
+*/
+
+#firstEn {
+    padding: 0;
+    margin: auto;
+    width: 600px;
+}
+
+#secondEn {
+    display: none;
+}
+#firstFr {
+    padding: 0;
+    margin: auto;
+    width: 600px;
+}
+
+#secondFr {
+    display: none;
+}
+#firstNl {
+    padding: 0;
+    margin: auto;
+    width: 600px;
+}
+
+#secondNl {
+    display: none;
+}
+
+.left {
+    float: left;
+}
+
+.brand_radio{
+    display: none !important;
+}
+
+.brand_label {
+    opacity: 0.3;
+    display: inline;
+    width: 75px;
+    height: 75px !important;
+    height: auto;
+}
+
+.brand_radio:checked + label {
+    opacity: 1;
+}
+
+.q_radio{
+    display: none !important;
+}
+
+.q_radio:checked + label {
+opacity: 1;
+}
+
+.block {
+    display: block;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    height: 20vh;
+}
+
+.feedback {
+    align-self: center;
+    width: 100%;
+    height: 50px;
+    border:1px solid black;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.plate {
+    align-self: center;
+    height: 40px;
+    border:1px solid black;
+    font-size: 1em;
+}
+
+.brand {
+    text-align: center;
+}
+
+.brand_img {
+    margin-top: 20px;
+    width: 250px;
+}
+
+.q1 {
+    padding-left: 2.5vw;
+}
+
+.q2 {
+    padding-left: 2.5vw;
+}
+
+.q3 {
+    padding-left: 2.5vw;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.elements {
+    margin-bottom: 50px;
+}
+
+.center a {
+    margin: 10px;
+}
+
+.names input {
+    width:30px !important;
+    height:30px!important;
+}

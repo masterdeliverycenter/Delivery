@@ -21,8 +21,57 @@
                         <br>
                         <input class="plate" name="commissienummer" type="number" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "6"> 
                     </div>
+                    <div class="brand elements">
+                        <label class="left">Marque: </label>
+                        <br>
+                        <div style="display: block; margin-bottom: 10px;">
+                        <input class="brand_radio" id="radio1" name="merk" type="radio" value="SEAT" required>
+                        <label class="brand_label" for="radio1"><img class="brand_img" src="img/seat.jpg" alt="seat logo" style="vertical-align: middle;" onclick="showSeat()"></label>
+                        <input class="brand_radio" id="radio2" name="merk" type="radio" value="AUDI">
+                        <label class="brand_label" for="radio2"><img class="brand_img" src="img/audi.jpg" alt="audi logo" style="vertical-align: middle;" onclick="showAudi()"></label>
+                        </div>
+                        <div style="display: block;">
+                        <input class="brand_radio" id="radio3" name="merk" type="radio" value="VW" required>
+                        <label class="brand_label" for="radio3"><img class="brand_img" src="img/vw.jpg" alt="vw logo" style="vertical-align: middle;" onclick="showVW()"></label>
+                        <input class="brand_radio" id="radio4" name="merk" type="radio" value="SKODA">
+                        <label class="brand_label" for="radio4"><img class="brand_img" src="img/skoda.jpg" alt="skoda logo" style="vertical-align: middle;" onclick="showSkoda()"></label>
+                        </div>
+                        <div style="display: block;">
+                        <input class="brand_radio" id="radio5" name="merk" type="radio" value="VWCV">
+                        <label class="brand_label" for="radio5"><img class="brand_img" src="img/vwcv.jpg" alt="vw cv logo" onclick="showVW()"></label>
+                        </div>
+                    </div>
                     <div class="elements names">
-                        <label>Conseiller Service:</label>
+                        <label>Vendeur:</label>
+                        <br>
+                        <!---VW---->
+                        <label class="block salesList vwSales"><input name="verkoper" type="radio" value="BERNARD">Bernard</label>
+                        <label class="block salesList vwSales"><input name="verkoper" type="radio" value="DAVID">David</label>
+                        <label class="block salesList vwSales"><input name="verkoper" type="radio" value="HARRISSON">Harrisson</label>
+                        <label class="block salesList vwSales"><input name="verkoper" type="radio" value="IVAN">Ivan</label>
+                        <label class="block salesList vwSales"><input name="verkoper" type="radio" value="JAMES">James</label>
+                        <label class="block salesList vwSales"><input name="verkoper" type="radio" value="JORIK">Jorik</label>
+                        <!--Skoda-->
+                        <label class="block salesList skodaSales"><input name="verkoper" type="radio" value="BERNARD" required>Bernard</label>
+                        <label class="block salesList skodaSales"><input name="verkoper" type="radio" value="JOHN">John</label>
+                        <label class="block salesList skodaSales"><input name="verkoper" type="radio" value="OTMAN">Otman</label>
+                        <!--Seat-->
+                        <label class="block salesList seatSales"><input name="verkoper" type="radio" value="BERNARD" required>Bernard</label>
+                        <label class="block salesList seatSales"><input name="verkoper" type="radio" value="MEL">Mel</label>
+                        <label class="block salesList seatSales"><input name="verkoper" type="radio" value="RAED">Raed</label>
+                        <!--Audi-->
+                        <label class="block salesList audiSales"><input name="verkoper" type="radio" value="ANNA" required>Anna</label>
+                        <label class="block salesList audiSales"><input name="verkoper" type="radio" value="BILAL">Bilal</label>
+                        <label class="block salesList audiSales"><input name="verkoper" type="radio" value="CEDRIC">Cedric</label>
+                        <label class="block salesList audiSales"><input name="verkoper" type="radio" value="CHRISTOPHE">Christophe</label>
+                        <label class="block salesList audiSales"><input name="verkoper" type="radio" value="KEVIN">Kevin</label>
+                        <label class="block salesList audiSales"><input name="verkoper" type="radio" value="VLADIM">Vladim</label>
+                        <!--Optioneel-->
+                        <label class="block"><input name="verkoper" type="radio" value="FLEET">Fleet</label>
+                        <label class="block"><input name="verkoper" id="andere" type="radio" value="">Autre: <input name="verkoper" type="text" id="andereInput" contextmenu="Andere" style="align-self:center;height: 40px;border:1px solid black;font-size: 1em; width: 60% !important;" onkeyup="this.value = this.value.toUpperCase();"></label>
+                    </div>
+                    <div class="elements names">
+                        <label>Livreur:</label>
                         <br>
                         <label class="block"><input name="levering" type="radio" value="BAKI" required>Baki</label>
                         <label class="block"><input name="levering" type="radio" value="YOUSSEF">Youssef</label>
@@ -30,6 +79,7 @@
                         <label class="block"><input name="levering" type="radio" value="NANCY">Nancy</label>
                         <label class="block"><input name="levering" type="radio" value="JEROEN">Jeroen</label>
                         <label class="block"><input name="levering" type="radio" value="JORDAN">Jordan</label>
+                        <label class="block"><input name="levering" id="leveringAndere" type="radio" value="">Autre: <input name="levering" type="text" id="andereLeveringInput" contextmenu="Andere" style="align-self:center;height: 40px;border:1px solid black;font-size: 1em; width: 60% !important;" onkeyup="this.value = this.value.toUpperCase();"></label>
                     </div>
                     
                     <div class="elements names">
@@ -41,26 +91,7 @@
                         <label class="block"><input name="enquete" type="radio" value="NANCY">Nancy</label>
                         <label class="block"><input name="enquete" type="radio" value="JEROEN">Jeroen</label>
                         <label class="block"><input name="enquete" type="radio" value="JORDAN">Jordan</label>
-                    </div>                    
-                    <div class="brand elements">
-                        <label class="left">Marque: </label>
-                        <br>
-                        <div style="display: block; margin-bottom: 10px;">
-                        <input class="brand_radio" id="radio1" name="merk" type="radio" value="VW" required>
-                        <label class="brand_label" for="radio1"><img class="brand_img" src="img/vw.jpg" alt="vw logo" style="vertical-align: middle;"></label>
-                        <input class="brand_radio" id="radio2" name="merk" type="radio" value="AUDI">
-                        <label class="brand_label" for="radio2"><img class="brand_img" src="img/audi.jpg" alt="audi logo" style="vertical-align: middle;"></label>
-                        </div>
-                        <div style="display: block;">
-                        <input class="brand_radio" id="radio3" name="merk" type="radio" value="SEAT" required>
-                        <label class="brand_label" for="radio3"><img class="brand_img" src="img/seat.jpg" alt="seat logo" style="vertical-align: middle;"></label>
-                        <input class="brand_radio" id="radio4" name="merk" type="radio" value="SKODA">
-                        <label class="brand_label" for="radio4"><img class="brand_img" src="img/skoda.jpg" alt="skoda logo" style="vertical-align: middle;"></label>
-                        </div>
-                        <div style="display: block;">
-                        <input class="brand_radio" id="radio5" name="merk" type="radio" value="SKODA">
-                        <label class="brand_label" for="radio5"><img class="brand_img" src="img/vwcv.jpg" alt="skoda logo"></label>
-                        </div>
+                        <label class="block"><input name="enquete" id="enqueteAndere" type="radio" value="">Autre: <input name="enquete" type="text" id="andereEnqueteInput" contextmenu="Andere" style="align-self:center;height: 40px;border:1px solid black;font-size: 1em; width: 60% !important;" onkeyup="this.value = this.value.toUpperCase();"></label>
                     </div>
                     <br>
                     <button class="submit" onclick="half()" type="button">Suivant</button>
@@ -129,9 +160,18 @@
                       console.log("test");
                   })
             function half() {
-                if (document.forms["enq"]["commissienummer"].value.length > 0 && $('input[type=radio][name=levering]:checked').size() > 0 && $('input[type=radio][name=enquete]:checked').size() > 0 && $('input[type=radio][name=merk]:checked').size() > 0) {
+                if (document.forms["enq"]["commissienummer"].value.length == 6 && $('input[type=radio][name=levering]:checked').size() > 0 && $('input[type=radio][name=enquete]:checked').size() > 0 && $('input[type=radio][name=merk]:checked').size() > 0 && $('input[type=radio][name=verkoper]:checked').size() > 0) {
                     document.getElementById("firstFr").style.display = "none";
                     document.getElementById("secondFr").style.display = "inherit";
+                }
+                if (document.getElementById('andere').checked == true) {
+                    document.getElementById('andere').value = document.getElementById('andereInput').value;
+                }
+                if (document.getElementById('leveringAndere').checked == true) {
+                    document.getElementById('leveringAndere').value = document.getElementById('andereLeveringInput').value;
+                }
+                if (document.getElementById('enqueteAndere').checked == true) {
+                    document.getElementById('enqueteAndere').value = document.getElementById('andereEnqueteInput').value;
                 }
             }
         </script>

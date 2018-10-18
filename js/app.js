@@ -23,6 +23,15 @@ function showVW() {
     }
 }
 
+function showVWCV() {
+    for (var i=0;i<document.getElementsByClassName("salesList").length;i+=1){
+        document.getElementsByClassName("salesList")[i].style.display = "none";
+    }
+    for (var i=0;i<document.getElementsByClassName("vwcvSales").length;i+=1){
+        document.getElementsByClassName("vwcvSales")[i].style.display = "inherit";
+    }
+}
+
 function showAudi() {
     for (var i=0;i<document.getElementsByClassName("salesList").length;i+=1){
         document.getElementsByClassName("salesList")[i].style.display = "none";

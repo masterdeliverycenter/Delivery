@@ -328,3 +328,16 @@ input::-webkit-inner-spin-button {
 vwSales {
     display: inherit;
 }
+
+.footerholder {
+    margin-top: 20px;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer {
+    height: 100px;
+    margin: auto;
+    width: 400px;
+}
